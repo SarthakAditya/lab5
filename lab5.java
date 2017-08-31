@@ -210,6 +210,7 @@ public class lab5 {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		Scanner sc =new Scanner(System.in);
+		int c=0;
 		int trees=sc.nextInt();
 		int students=sc.nextInt();
 		BSTFilesBuilder a=new BSTFilesBuilder();
@@ -258,6 +259,7 @@ public class lab5 {
 				if(i==b[i].root.pos)
 				{
 					a.output(i,b[i].sums);
+					c++;
 				}
 			}
 			else if(b[i].root.getData() instanceof Integer)
@@ -265,6 +267,7 @@ public class lab5 {
 				if(i==b[i].root.pos)
 				{
 					a.output(i,Integer.toString(b[i].sumi));
+					c++;
 				}
 			}
 			else if(b[i].root.getData() instanceof Float)
@@ -272,10 +275,12 @@ public class lab5 {
 				if(i==b[i].root.pos)
 				{
 					a.output(i,Float.toString(b[i].sumf));
+					c++;
 				}
 			}
 
 		}
+		a.output(c,null);
 
 	}
 
