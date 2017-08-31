@@ -215,15 +215,15 @@ public class lab5 {
 		int students=sc.nextInt();
 		BSTFilesBuilder a=new BSTFilesBuilder();
 		a.createBSTFiles(students,trees);
-		gBst[] b=null;
-		for(int i=1;i<=trees;i++){
+		gBst[] b=new gBst[trees];
+		for(int i=0;i<=trees;i++){
 			String source="./src/";
-			source+=i;
+			int temp=i+1;
+			source+=temp;
 			source+=".txt";
 			FileReader file=new FileReader(source);
 			BufferedReader rd=new BufferedReader(file);
 			String t=rd.readLine();
-			System.out.println(t);
 			rd.readLine();
 			if(t.equals("Integer"))
 			{
