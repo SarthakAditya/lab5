@@ -224,7 +224,7 @@ public class lab5 {
 			BufferedReader rd=new BufferedReader(file);
 			String t=rd.readLine();
 			System.out.println(t);
-			t=rd.readLine();
+			rd.readLine();
 			if(t.equals("Integer"))
 			{
 				b[i]=new gBst<Integer>();
